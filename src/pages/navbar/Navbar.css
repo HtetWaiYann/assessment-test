@@ -1,0 +1,107 @@
+.navbar {
+    background-color: var(--navbar-color);
+    padding: 0 10px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .05);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s;
+}
+
+.navbar .navbar-logo{
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+
+.navbar .navbar-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar .navbar-container .nav-menu {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .navbar-container .nav-menu .nav-item {
+    padding: 10px 5px;
+    transition: all 0.3s;
+    cursor: pointer;
+    height: -webkit-fill-available;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+}
+
+li {
+    list-style: none;
+}
+
+.nav-active {
+    background-color: var(--main-color);
+}
+
+.menu-icon {
+    display: none;
+}
+
+.me {
+    margin-right: 3rem;
+}
+
+@media (max-width: 1139px) {
+    .menu-icon {
+        margin-right: 20px;
+        display: block;
+        cursor: pointer;
+        padding: 8px 15px;
+        background-color: var(--text-color);
+        border: none;
+        border-radius: 5%;
+    }
+    .nav-menu {
+        display: none !important;
+    }
+    .responsive {
+        position: absolute;
+        top: 60px;
+        left: 0px;
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    .nav-item {
+        color: black;
+        width: 100vw;
+        background-color: #f0f8ff;
+        border: 1px solid var(--main-color);
+    }
+    .nav-active {
+        background-color: var(--main-color) !important;
+    }
+    .navbar .navbar-container .nav-menu .nav-item {
+        margin: 0 0px;
+        padding: 10px 5px;
+        transition: all 0.3s;
+        cursor: pointer;
+        height: -webkit-fill-available;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
